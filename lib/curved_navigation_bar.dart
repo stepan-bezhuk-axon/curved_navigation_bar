@@ -22,7 +22,7 @@ class CurvedNavigationBar extends StatefulWidget {
   CurvedNavigationBar({
     Key? key,
     required this.items,
-    this.index = 2,
+    this.index = 1,
     this.color = Colors.white,
     this.buttonBackgroundColor,
     this.backgroundColor = Colors.blueAccent,
@@ -44,7 +44,7 @@ class CurvedNavigationBar extends StatefulWidget {
 class CurvedNavigationBarState extends State<CurvedNavigationBar>
     with SingleTickerProviderStateMixin {
   late double _startingPos;
-  int _endingIndex = 2;
+  int _endingIndex = 1;
   late double _pos;
   double _buttonHide = 0;
   late Widget _icon;
