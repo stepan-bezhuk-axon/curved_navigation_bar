@@ -7,7 +7,11 @@ class NavCustomPainter extends CustomPainter {
   TextDirection textDirection;
 
   NavCustomPainter(
-      double startingLoc, int itemsLength, this.color, this.textDirection) {
+    double startingLoc,
+    int itemsLength,
+    this.color,
+    this.textDirection,
+  ) {
     final span = 1.0 / itemsLength;
     s = 0.2;
     double l = startingLoc + (span - s) / 2;
@@ -20,30 +24,100 @@ class NavCustomPainter extends CustomPainter {
       ..color = color
       ..style = PaintingStyle.fill;
 
-    final path = Path()
-      ..moveTo(0, 0)
-      ..lineTo((loc - 0.1) * size.width, 0)
-      ..cubicTo(
-        (loc + s * 0.20) * size.width,
-        size.height * 0.05,
-        loc * size.width,
-        size.height * 0.60,
-        (loc + s * 0.50) * size.width,
-        size.height * 0.60,
-      )
-      ..cubicTo(
-        (loc + s) * size.width,
-        size.height * 0.60,
-        (loc + s - s * 0.20) * size.width,
-        size.height * 0.05,
-        (loc + s + 0.1) * size.width,
-        0,
-      )
-      ..lineTo(size.width, 0)
-      ..lineTo(size.width, size.height)
-      ..lineTo(0, size.height)
-      ..close();
-    canvas.drawPath(path, paint);
+    final path_0 = Path();
+
+    path_0.moveTo(size.width * 0.003454722, 0);
+    path_0.lineTo(size.width * (loc - 0.1), 0);
+    path_0.cubicTo(
+      size.width * (loc - s * 0.1),
+      0,
+      size.width * loc,
+      size.height * 0.1251021,
+      size.width * (loc + s * 0.0329083),
+      size.height * 0.2798485,
+    );
+    path_0.lineTo(
+      size.width * (loc + 0.015),
+      size.height * 0.5790619,
+    );
+    path_0.cubicTo(
+      size.width * (loc + s * 0.2529083),
+      size.height * 0.8524258,
+      size.width * (loc + s * 0.3929250),
+      size.height * 0.6072515,
+      size.width * (loc + s * 1.0023000),
+      size.height * 0.9772515,
+    );
+    path_0.lineTo(
+      size.width * loc,
+      size.height * 0.7872515,
+    );
+    path_0.cubicTo(
+      size.width * (loc + s * 0.7028333),
+      size.height * 0.7872515,
+      size.width * (loc + s * 0.8628500),
+      size.height * 0.6824258,
+      size.width * (loc + s * 0.9228500),
+      size.height * 0.4790619,
+    );
+    path_0.lineTo(
+      size.width * (loc + 0.18928500),
+      size.height * 0.3011928,
+    );
+    path_0.cubicTo(
+      size.width * (loc + s * 1.0028500),
+      size.height * 0.1345876,
+      size.width * (loc + s * 1.0555250),
+      0,
+      size.width * (loc + s * 1.4759750),
+      0,
+    );
+    path_0.lineTo(
+      size.width * (loc + 0.9965444),
+      0,
+    );
+    path_0.cubicTo(
+      size.width,
+      0,
+      size.width,
+      size.height * 0.006521845,
+      size.width,
+      size.height * 0.01422948,
+    );
+    path_0.lineTo(
+      size.width,
+      size.height * 0.9948454,
+    );
+    path_0.cubicTo(
+      size.width,
+      size.height * 1.002553,
+      size.width,
+      size.height * 0.7864588,
+      size.width,
+      size.height,
+    );
+    path_0.lineTo(
+      size.width * 0.007972111,
+      size.height,
+    );
+    path_0.lineTo(
+      size.width * -0.01388889,
+      size.height,
+    );
+    path_0.lineTo(
+      0,
+      size.height * 0.01422948,
+    );
+    path_0.cubicTo(
+      size.width * 0.0001439469,
+      size.height * 0.006521845,
+      size.width * 0.001583417,
+      0,
+      size.width * 0.003454722,
+      0,
+    );
+    path_0.close();
+    canvas.drawPath(path_0, paint);
   }
 
   @override
