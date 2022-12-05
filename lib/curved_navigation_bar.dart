@@ -44,7 +44,7 @@ class CurvedNavigationBar extends StatefulWidget {
 class CurvedNavigationBarState extends State<CurvedNavigationBar>
     with SingleTickerProviderStateMixin {
   late double _startingPos;
-  int _endingIndex = 1;
+  late int _endingIndex;
   late double _pos;
   double _buttonHide = 0;
   late Widget _icon;
@@ -55,6 +55,7 @@ class CurvedNavigationBarState extends State<CurvedNavigationBar>
   @override
   void initState() {
     super.initState();
+    _endingIndex = widget.index;
     _icon = widget.items[widget.index].icon;
     _length = widget.items.length;
     _pos = widget.index / _length;
