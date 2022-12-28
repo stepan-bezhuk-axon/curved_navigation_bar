@@ -28,14 +28,18 @@ class NavButton extends StatelessWidget {
           onTap(index);
         },
         child: Container(
-            height: 75.0,
-            child: Transform.translate(
-              offset: Offset(
-                  0, difference < 1.0 / length ? verticalAlignment * 40 : 0),
-              child: Opacity(
-                  opacity: difference < 1.0 / length * 0.99 ? opacity : 1.0,
-                  child: child),
-            )),
+          height: 120.0,
+          child: Transform.translate(
+            offset: Offset(
+              0,
+              difference < 1.0 / length ? verticalAlignment * 40 : 0,
+            ),
+            child: Opacity(
+              opacity: difference < 1.0 / length * 0.99 ? opacity : 1.0,
+              child: child,
+            ),
+          ),
+        ),
       ),
     );
   }
