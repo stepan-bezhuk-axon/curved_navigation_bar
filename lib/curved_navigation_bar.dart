@@ -151,7 +151,7 @@ class CurvedNavigationBarState extends State<CurvedNavigationBar>
           Positioned(
             left: 0,
             right: 0,
-            bottom: 0 - (110.0 - widget.height),
+            bottom: 0 - (105.0 - widget.height),
             child: CustomPaint(
               painter: NavCustomPainter(
                 _pos,
@@ -167,7 +167,7 @@ class CurvedNavigationBarState extends State<CurvedNavigationBar>
           Positioned(
             left: 0,
             right: 0,
-            bottom: 0 - (125.0 - widget.height),
+            bottom: 0 - (120.0 - widget.height),
             child: SizedBox(
               height: 100.0,
               child: Row(
